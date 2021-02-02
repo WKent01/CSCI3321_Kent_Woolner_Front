@@ -4,12 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Favorite Recipes</title>
-
     <style>
+        *{
+            font-family: "Verdana";
+        }
+        .page-wrapper{
+            margin: 15px;
+        }
+
+        .row{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 75%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .column{
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            flex: 1;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+        }
 
     </style>
 </head>
-<body>
+<body style = "background-color: slategrey;">
     <h1>Food 1</h1>
+    <img src = "https://images.squarespace-cdn.com/content/v1/59d40133017db2fd8a60b3fe/1611850384770-3URP3JRXVG4WQ0P3UYAR/ke17ZwdGBToddI8pDm48kPTrHXgsMrSIMwe6YW3w1AZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k5fwC0WRNFJBIXiBeNI5fKTrY37saURwPBw8fO2esROAxn-RKSrlQamlL27g22X2A/shrimp+scampi_still+2.jpg?format=1500w" alt = "Shrimp Scampi">
+    <div class = "page-wrapper">
+        <div class = "row">
+            <div class = "column">
+                <h2 style = "color: white"> <u><b>Ingredients:</b></u> </h2>
+                <ul>
+                    <li>2 tsp kosher salt</li>
+                    <li>1/2 lb linguine pasta</li>
+                </ul>
+            </div>
+            <div class = "column">
+                <h2 style = "color: white"> <u><b>Directions:</b></u> </h2>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
