@@ -5,7 +5,6 @@ function updateDisplay(newValue){
     var d = document.getElementById('display');
     //limits how many characters are in the display
     d.innerHTML = d.innerHTML.substr(0, 23);
-    var err = 'err';
 
     switch(newValue){
         case 'AC':
