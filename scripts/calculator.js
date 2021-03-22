@@ -3,20 +3,42 @@ var num;
 
 function updateDisplay(newValue){
     var d = document.getElementById('display');
+    //limits how many characters are in the display
+    d.innerHTML = d.innerHTML.substr(0, 23);
+    var err = 'err';
 
     switch(newValue){
         case 'AC':
             d.innerHTML = '';
             break;
         case '+':
-            d.innerHTML += "+";
-            break;
+            if(d.innerHTML.length == 0){
+                break;
+            }else if(d.innerHTML.endsWith('+') || d.innerHTML.endsWith('/') || d.innerHTML.endsWith('-') || d.innerHTML.endsWith('*')){
+                break;
+            }else{
+                d.innerHTML += "+";
+                break;
+            }
         case '-':
-            d.innerHTML += "-";
-            break;
+            if(d.innerHTML.length == 0){
+                break;
+            }else if(d.innerHTML.endsWith('+') || d.innerHTML.endsWith('/') || d.innerHTML.endsWith('-') || d.innerHTML.endsWith('*')){
+                break;
+            }else{
+                d.innerHTML += "-";
+                break;
+            }
         case '*':
-            d.innerHTML += "*";
-            break;
+            if(d.innerHTML.length == 0){
+                break;
+            }else if(d.innerHTML.endsWith('+') || d.innerHTML.endsWith('/') || d.innerHTML.endsWith('-') || d.innerHTML.endsWith('*')){
+                break;
+            }else{
+                d.innerHTML += "*";
+                break;
+            }
+            
         case '/':
             //if the display box is empty
                 //do nothing
@@ -24,14 +46,23 @@ function updateDisplay(newValue){
                 //do nothing
             //else
                 //append the key to the display box content
-            d.innerHTML += "/";
-            break;
+            if(d.innerHTML.length == 0){
+                break;
+            }else if(d.innerHTML.endsWith('+') || d.innerHTML.endsWith('*') || d.innerHTML.endsWith('-') || d.innerHTML.endsWith('/')){
+                break;
+            }else{
+                d.innerHTML += "/";
+                break;
+            }
             
         case '=':
             //if the display box is not empty
             //call JavaScript's evaluation function to evaluate
             //the content of the display box
-            if(d.innerHTML.length != 0){
+            if(d.innerHTML.endsWith('+') || d.innerHTML.endsWith('*') || d.innerHTML.endsWith('-') ||  d.innerHTML.endsWith('/')){
+                d.innerHTML = "Err"
+                break;
+            }else if(d.innerHTML.length != 0){
                 d.innerHTML = eval(d.innerHTML);
                 break;
             }else{
@@ -42,6 +73,5 @@ function updateDisplay(newValue){
             break;
 
     }
-
-    //d.innerHTML += newValue;
+    
 }
