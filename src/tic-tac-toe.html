@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "/scripts/tic-tac-toe.js"></script>
     <link rel = "stylesheet" href = "/style/tic-tac-toe.css">
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
     <div id = "container">
-        <div class = "tile upperLeft"></div>
-        <div class = "tile upperMiddle"></div>
-        <div class = "tile upperRight"></div>
-        <div class = "tile Left"></div>
-        <div class = "tile Middle"></div>
-        <div class = "tile Right"></div>
-        <div class = "tile lowerLeft"></div>
-        <div class = "tile lowerMiddle"></div>
-        <div class = "tile lowerRight"></div>
-        <div id = "display">Player X Starts First</div>
+        <div id = "one" class = "tile" onclick="placeMarker('1')"></div>
+        <div id = "two" class = "tile" onclick="placeMarker('2')"></div>
+        <div id = "three" class = "tile" onclick="placeMarker('3')"></div>
+        <div id = "four" class = "tile" onclick="placeMarker('4')"></div>
+        <div id = "five" class = "tile" onclick="placeMarker('5')"></div>
+        <div id = "six" class = "tile" onclick="placeMarker('6')"></div>
+        <div id = "seven" class = "tile" onclick="placeMarker('7')"></div>
+        <div id = "eight" class = "tile" onclick="placeMarker('8')"></div>
+        <div id = "nine" class = "tile" onclick="placeMarker('9')"></div>
+        <div id = "display">It's Player X's turn.</div>
+
     </div>
+
+    <ul style = "font-size: 50px;">Rules:
+        <li>Players take turns placing and X or an O on the grid.</li>
+        <li>To win, players must get 3 of their marks in a row, column, or diagonal to win.</li>
+    </ul>
 </body>
 </html>

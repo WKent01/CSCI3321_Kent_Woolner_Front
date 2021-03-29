@@ -1,25 +1,30 @@
+*{
+    background-color: #ebe534;
+}
+
 #container{
     width: 910px;
     height: 910px;
     margin: auto;
-    background-color: #FFFF;
+    background-color: #ebe534;
     padding: 5px;
     text-align: center;
+    justify-content: center;
     display: grid;
     grid-gap: 5px;
     grid-template-areas: 
-        'upLeft upMiddle upRight'
-        'cenLeft cenMiddle cenRight'
-        'lowLeft lowMiddle lowRight'
-        'result result result';
-
+        'one two three'
+        'four five six'
+        'seven eight nine'
+        'display display display';
+    
 }
 
 #display{
-    grid-area: result;
+    grid-area: display;
     border-radius: 10px;
     width: 910px;
-    height: 300px;
+    height: 150px;
     background-color: #0000;
     font-size: 50px;
     text-align: center;
@@ -30,38 +35,46 @@
     width: 300px;
     height: 300px;
     background-color: #61429d;
+    font-size: 250px;  
+    color: #FFFF;
     cursor: pointer;
 
 }
 
-
-.upperMiddle{
-    grid-area: upMiddle;
+.one{
+    grid-area: 1;
 }
 
-
-.Left{
-    grid-area: cenLeft;
+.two{
+    grid-area: 2;
 }
 
-.Middle{
-    grid-area: cenMiddle;
+.three{
+    grid-area: 3;
 }
 
-.Right{
-    grid-area: cenRight;
+.four{
+    grid-area: 4;
 }
 
-.lowerLeft{
-    grid-area: lowLeft;
+.five{
+    grid-area: 5;
 }
 
-.lowerMiddle{
-    grid-area: lowMiddle;
+.six{
+    grid-area: 6;
 }
 
-.lowerRight{
-    grid-area: lowRight;
+.seven{
+    grid-area: 7;
+}
+
+.eight{
+    grid-area: 8;
+}
+
+.nine{
+    grid-area: 9;
 }
 
 
